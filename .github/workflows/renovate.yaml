@@ -25,3 +25,5 @@ jobs:
           docker-cmd-file: entrypoint.sh
           docker-user: root
           token: ${{ steps.app-token.outputs.token }}
+        env:
+          LOG_LEVEL: debug
