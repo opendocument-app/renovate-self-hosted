@@ -2,14 +2,11 @@
 
 set -e
 
-which conan || true
-conan --version || true
-
-install-apt pipx
+install-apt python3 pipx
 pipx ensurepath
 pipx install conan
 
 git clone https://github.com/opendocument-app/conan-odr-index.git
-python conan-odr-index/scripts/conan_export_all_packages.py
+python3 conan-odr-index/scripts/conan_export_all_packages.py
 
 exec runuser -u ubuntu renovate
