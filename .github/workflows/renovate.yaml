@@ -1,6 +1,8 @@
 name: renovate
 
-on: push
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
   renovate:
